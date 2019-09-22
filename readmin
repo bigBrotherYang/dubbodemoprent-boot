@@ -1,0 +1,12 @@
+structure
+    dubbo-demo-parent 父
+        dubbo-api 子
+            |---- pojo
+            |---- api 接口
+        dome-scz 子
+            |---- 依赖 api
+            |---- 持久层 mybatis ----> oracle
+            |---- spring boot启动
+        dome-xfz 子
+            |---- 依赖 api
+            |---- spring boot启动

@@ -1,0 +1,25 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: scott
+    password: xtkj123
+    url: jdbc:oracle:thin:@192.168.11.8:1521:orcl
+  dubbo:
+    application:
+      name: dubbo-scz
+    protocol:
+      id: dubbo
+      port: 20880
+      serialization: hessian2
+    registry:
+      address: zookeeper://127.0.0.1
+      port: 2181
+    scan: com.xtkj.api.impl
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:com/xtkj/mapper/*.xml
+  type-aliases-package: com.xtkj.pojo
+
